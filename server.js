@@ -1,16 +1,22 @@
 const express = require('express');
-const studentRoutes = require('./routes/students');
 
+const mongodb = require('./data/database');
 const app = express();
-const PORT = process.env.PORT || 8080;
+
+const port = process.env.PORT || 8080;
+
+app.use('/', require('./routes'));
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Student API!');
 });
 
-app.use(express.json());
 
-app.use('/api/students', studentRoutes);
+mongodb.initDb((err) => {
+    if (err) {
+        console.log(err);
+    } else {
+        app.listen(port, () => { console.log(`Database is listening and node is Running on port ${port}`) });
+    }
+});
 
-app.listen(process.env.PORT || PORT);
-console.log('Web Server is listening at port ' + (process.env.PORT || 8080));

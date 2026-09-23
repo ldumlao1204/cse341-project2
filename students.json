@@ -1,0 +1,79 @@
+[
+    {
+        "firstName": "Ava",
+        "lastName": "Santos",
+        "email": "ava.santos@example.com",
+        "birthday": {
+            "$date": "2003-04-12T00:00:00.000Z"
+        },
+        "address": "123 Maple St, Quezon City",
+        "contactNumber": "+63 917 555 0101",
+        "section": "A"
+    },
+    {
+        "firstName": "Noah",
+        "lastName": "Reyes",
+        "email": "noah.reyes@example.com",
+        "birthday": {
+            "$date": "2002-11-03T00:00:00.000Z"
+        },
+        "address": "45 Rizal Ave, Manila",
+        "contactNumber": "+63 918 555 0102",
+        "section": "A"
+    },
+    {
+        "firstName": "Mia",
+        "lastName": "Cruz",
+        "email": "mia.cruz@example.com",
+        "birthday": {
+            "$date": "2003-07-19T00:00:00.000Z"
+        },
+        "address": "88 Aurora Blvd, Pasig City",
+        "contactNumber": "+63 919 555 0103",
+        "section": "B"
+    },
+    {
+        "firstName": "Liam",
+        "lastName": "Garcia",
+        "email": "liam.garcia@example.com",
+        "birthday": {
+            "$date": "2004-01-25T00:00:00.000Z"
+        },
+        "address": "14 Bonifacio St, Makati City",
+        "contactNumber": "+63 920 555 0104",
+        "section": "B"
+    },
+    {
+        "firstName": "Sophia",
+        "lastName": "Lopez",
+        "email": "sophia.lopez@example.com",
+        "birthday": {
+            "$date": "2002-09-08T00:00:00.000Z"
+        },
+        "address": "201 Mabini St, Cebu City",
+        "contactNumber": "+63 921 555 0105",
+        "section": "C"
+    },
+    {
+        "firstName": "Ethan",
+        "lastName": "Dela Cruz",
+        "email": "ethan.delacruz@example.com",
+        "birthday": {
+            "$date": "2003-12-14T00:00:00.000Z"
+        },
+        "address": "77 Lakandula Rd, Davao City",
+        "contactNumber": "+63 922 555 0106",
+        "section": "C"
+    },
+    {
+        "firstName": "Isabella",
+        "lastName": "Navarro",
+        "email": "isabella.navarro@example.com",
+        "birthday": {
+            "$date": "2004-05-30T00:00:00.000Z"
+        },
+        "address": "9 Del Pilar St, Baguio City",
+        "contactNumber": "+63 923 555 0107",
+        "section": "A"
+    }
+]
