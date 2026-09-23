@@ -1,6 +1,11 @@
 const router = require('express').Router(); // handle routing for the /students endpoint
 
-router.get('/', (req, res) => { res.send('Welcome to the Student API!'); });
+router.use('/swagger', require('./swagger'));
+
+router.get('/', (req, res) => {
+    //#swagger.tags=['Welcome to the Student API!');
+    res.send((`Welcome to the Student API!`));
+});
 
 router.use('/students', require('./students'));
 

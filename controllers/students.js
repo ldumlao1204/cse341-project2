@@ -6,6 +6,7 @@ const studentsCollection = () => mongodb.getDatabase().collection('students');
 const isValidEmail = (email) => typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const getAllStudents = async (req, res) => {
+    //#swagger.tags=['Students']
     try {
         const students = await studentsCollection().find().toArray();
         res.status(200).json(students);
@@ -15,6 +16,7 @@ const getAllStudents = async (req, res) => {
 };
 
 const getSingleStudent = async (req, res) => {
+    //#swagger.tags=['Students']
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json({ error: 'Invalid student ID.' });
     }
@@ -35,6 +37,7 @@ const getSingleStudent = async (req, res) => {
 };
 
 const createStudent = async (req, res) => {
+    //#swagger.tags=['Students']
     const student = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -70,6 +73,7 @@ const createStudent = async (req, res) => {
 };
 
 const updateStudent = async (req, res) => {
+    //#swagger.tags=['Students']
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json({ error: 'Invalid student ID.' });
     }
@@ -118,6 +122,7 @@ const updateStudent = async (req, res) => {
 };
 
 const deleteStudent = async (req, res) => {
+    //#swagger.tags=['Students']
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json({ error: 'Invalid student ID.' });
     }
