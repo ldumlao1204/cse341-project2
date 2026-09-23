@@ -1,7 +1,7 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
-const studentsCollection = () => mongodb.getDatabase().db().collection('students');
+const studentsCollection = () => mongodb.getDatabase().collection('students');
 
 const isValidEmail = (email) => typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
