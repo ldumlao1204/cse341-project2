@@ -1,6 +1,6 @@
 const router = require('express').Router(); // handle routing for the /students endpoint
 
-router.use('/swagger', require('./swagger'));
+router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {
     //#swagger.tags=['Welcome to the Student API!');
