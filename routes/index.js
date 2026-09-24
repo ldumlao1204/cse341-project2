@@ -3,7 +3,7 @@ const router = require('express').Router(); // handle routing for the /students 
 router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {
-    //#swagger.tags=['Welcome to the Student API!');
+    //#swagger.tags=['Welcome to the Student API!'];
     res.send((`Welcome to the Student API!`));
 });
 

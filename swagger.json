@@ -21,16 +21,6 @@
         }
       }
     },
-    "/swagger/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/students/": {
       "get": {
         "tags": [
