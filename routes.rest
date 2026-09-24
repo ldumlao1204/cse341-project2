@@ -1,0 +1,37 @@
+// LOCALHOST
+### Get all students
+GET http://localhost:8080/students/
+
+### Get students by ID
+GET http://localhost:8080/students/6ab3e1b5d4fbdb80ed79fc13
+### Create students
+POST http://localhost:8080/students/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "Noah",
+  "lastName": "Reyes",
+  "email": "test1@example.com",
+  "birthday": "2002-11-03T00:00:00.000Z",
+  "address": "45 Rizal Ave, Manila",
+  "contactNumber": "+63 918 555 0102",
+  "section": "A"
+}
+
+### Put Students
+PUT http://localhost:8080/students/6ab3e1b5d4fbdb80ed79fc13 HTTP/1.1
+Content-Type: application/json
+
+ {
+  "firstName": "Noah",
+  "lastName": "Reyes Moore",
+  "email": "test1@example.com",
+  "birthday": "2002-11-03T00:00:00.000Z",
+  "address": "45 Rizal Ave, Manila",
+  "contactNumber": "+63 918 555 0102",
+  "section": "A"
+ }
+
+### Delete students
+DELETE http://localhost:8080/students/6ab3e1b5d4fbdb80ed79fc13
+
