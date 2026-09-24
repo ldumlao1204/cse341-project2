@@ -13,10 +13,13 @@
   "paths": {
     "/": {
       "get": {
+        "tags": [
+          "Welcome to the Student API!"
+        ],
         "description": "",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -45,31 +48,10 @@
           {
             "name": "body",
             "in": "body",
+            "description": "Student information to create",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                },
-                "address": {
-                  "example": "any"
-                },
-                "contactNumber": {
-                  "example": "any"
-                },
-                "section": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/definitions/Student"
             }
           }
         ],
@@ -133,31 +115,10 @@
           {
             "name": "body",
             "in": "body",
+            "description": "Student fields to update (send only the fields you want to change)",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "birthday": {
-                  "example": "any"
-                },
-                "address": {
-                  "example": "any"
-                },
-                "contactNumber": {
-                  "example": "any"
-                },
-                "section": {
-                  "example": "any"
-                }
-              }
+              "$ref": "#/definitions/Student"
             }
           }
         ],
@@ -207,6 +168,46 @@
           }
         }
       }
+    }
+  },
+  "definitions": {
+    "Student": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "Ava"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "Santos"
+        },
+        "email": {
+          "type": "string",
+          "example": "ava.santos@example.com"
+        },
+        "birthday": {
+          "type": "string",
+          "example": "2003-04-12"
+        },
+        "address": {
+          "type": "string",
+          "example": "123 Maple St, Quezon City"
+        },
+        "contactNumber": {
+          "type": "string",
+          "example": "+63 917 555 0101"
+        },
+        "section": {
+          "type": "string",
+          "example": "A"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "email"
+      ]
     }
   }
 }

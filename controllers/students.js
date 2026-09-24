@@ -38,6 +38,12 @@ const getSingleStudent = async (req, res) => {
 
 const createStudent = async (req, res) => {
     //#swagger.tags=['Students']
+    /* #swagger.parameters['body'] = {
+       in: 'body',
+       description: 'Student information to create',
+       required: true,
+       schema: { $ref: '#/definitions/Student' }
+   } */
     const student = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -74,6 +80,12 @@ const createStudent = async (req, res) => {
 
 const updateStudent = async (req, res) => {
     //#swagger.tags=['Students']
+    /* #swagger.parameters['body'] = {
+        in: 'body',
+        description: 'Student fields to update (send only the fields you want to change)',
+        required: true,
+        schema: { $ref: '#/definitions/Student' }
+    } */
     if (!ObjectId.isValid(req.params.id)) {
         return res.status(400).json({ error: 'Invalid student ID.' });
     }
