@@ -8,5 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/students', require('./students'));
+router.use('/courses', require('./courses'));
+
 
 module.exports = router;

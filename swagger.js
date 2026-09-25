@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'Students API',
-        description: 'API for managing student information'
+        description: 'API for managing students and courses information'
     },
     host: 'cse341-project2-hpei.onrender.com',
     schemes: ['https'],
@@ -16,6 +16,13 @@ const doc = {
             address: '123 Maple St, Quezon City',
             contactNumber: '+63 917 555 0101',
             section: 'A'
+        },
+        Course: {
+            $courseCode: 'CSE341',
+            $courseName: 'Web Backend Development II',
+            $instructor: 'Brother Smith',
+            $credits: 3,
+            $semester: 'Fall 2026'
         }
     }
 };

@@ -35,3 +35,66 @@ Content-Type: application/json
 ### Delete students
 DELETE http://localhost:8080/students/6ab3e1b5d4fbdb80ed79fc13
 
+
+// ========== COURSES ==========
+
+### Get all courses
+GET http://localhost:8080/courses/
+
+### Get course by ID
+GET http://localhost:8080/courses/6ab5928cfe6f41515ae2fa59
+
+### Create course
+POST http://localhost:8080/courses/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "courseCode": "CSE210",
+  "courseName": "Programming with Classes",
+  "instructor": "Brother Taylor",
+  "credits": 2,
+  "semester": "Winter 2027"
+}
+
+### Update course
+PUT http://localhost:8080/courses/6ab5928cfe6f41515ae2fa5b HTTP/1.1
+Content-Type: application/json
+
+{
+  "courseCode": "WDD330",
+  "courseName": "Web Frontend Development II",
+  "instructor": "Sister Garcia",
+  "credits": 3,
+  "semester": "Winter 2027"
+}
+
+### Delete course (paste the courseId from "Create course" here)
+DELETE http://localhost:8080/courses/6ab5967b5443b9b963575948
+
+// ----- Validation tests (should return 400) -----
+
+### Bad credits (text instead of number)
+POST http://localhost:8080/courses/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "courseCode": "CSE999",
+  "courseName": "Test Course",
+  "instructor": "Brother Test",
+  "credits": "three",
+  "semester": "Fall 2026"
+}
+
+### Missing required field (no courseName)
+POST http://localhost:8080/courses/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "courseCode": "CSE999",
+  "instructor": "Brother Test",
+  "credits": 3,
+  "semester": "Fall 2026"
+}
+
+### Invalid ID
+GET http://localhost:8080/courses/123
