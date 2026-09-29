@@ -5,8 +5,8 @@ const doc = {
         title: 'Students API',
         description: 'API for managing students and courses information'
     },
-    host: 'cse341-project2-hpei.onrender.com',
-    schemes: ['https'],
+
+    schemes: ['https', 'http'],
     definitions: {
         Student: {
             $firstName: 'Ava',
