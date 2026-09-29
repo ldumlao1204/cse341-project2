@@ -3,9 +3,9 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
     info: {
         title: 'Students API',
-        description: 'API for managing students and courses information'
+        description: 'API for managing students and courses information. GET routes are public. POST, PUT, and DELETE require login: visit /login to sign in with GitHub, and /logout to sign out. Requests without login return 401 Unauthorized.'
     },
-
+    host: 'cse341-project2-hpei.onrender.com',
     schemes: ['https', 'http'],
     definitions: {
         Student: {
